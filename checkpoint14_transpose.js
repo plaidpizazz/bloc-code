@@ -10,3 +10,11 @@ function transposeTwoStrings(matrix) {
   return m;
 }
 transposeTwoStrings(["Hello", "World"]);
+
+function transposeTwoStrings(a) {
+    return Object.keys(a[0]).map(
+        function (c) { return a.map(function (r) { return r[c]; }); }
+        );
+    }
+    
+ transposeTwoStrings(["Hello", "World"]);
